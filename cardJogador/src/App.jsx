@@ -7,14 +7,30 @@ import alireza from './assets/img/alireza.png'
 import fabiano from './assets/img/fabiano.png'
 import ian from './assets/img/ian.png'
 import magnus from './assets/img/magnus.png'
+import './App.css'
 
 // Função principal do App
 export default function App() {
 
   const [changeColor, setChangeColor] = useState(false)
+  const [changeNameButton, setChangeNameButton] = useState(false);
+  const [buttonName, setButtonName] = useState("Luz");
+
+  const handleChangeNameButton = () => {
+    if (buttonName == "Luz") {
+      setButtonName("Trevas");
+    } else {
+      setButtonName("Luz")
+    }
+  }
 
   const handleChangeColor = () => {
-    setChangeColor(true);
+    handleChangeNameButton();
+    if (changeColor) {
+      setChangeColor(false);
+    } else {
+      setChangeColor(true)
+    }
   }
   // Array de objetos representando os jogadores 
   // Cada onjeto tem um id e as props nome, posição, time, avaliação e imagem
@@ -75,11 +91,10 @@ export default function App() {
         display: "flex",
         gap: "20px",
         justifyContent: "center",
-        marginTop: "50px",
         flexWrap: "wrap" // permite a quebra de linhas se a tela for pequena
       }}
     >
-      <div style={{ width: "100%" }}>
+      <div style={{ width: "100%", marginTop: "2%"}} className={`${changeColor} ? "color-active" : ""`}>
         <Titulo texto="Lista Jogadores " />
       </div>
       {jogadores.map((j) => (
@@ -88,7 +103,9 @@ export default function App() {
         <CardJogador key={j.id}{...j} />
       ))}
 
-      <button onClick={handleChangeColor}>Change Color</button>
+      <button onClick={handleChangeColor}>
+        <i class={`fas fa-${buttonName == "Luz" ? "sun" : "moon"} fa-lg`}></i>
+        </button>
     </main>
   )
 }

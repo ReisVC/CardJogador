@@ -6,6 +6,7 @@
     border-radius: 16px;  /* arredondar os cantos do card com um raio 16px*/
     padding: 24px;
     width: 320px;     /*Largura do card */
+    max-height: 200px;
     transition: transform .15s ease, box-shadow .15s ease ; /* transição suave para os efeitos de transformação e sombra ao passar o mouse */
 }
 .card-jogador:hover{
@@ -39,8 +40,9 @@
     padding: 4px 12px;  /* espaçamento interno: 4px vertical e 12px horizontal*/
     border-radius: 999px;  /* Deixa as bordas totalmente arredondadas, causando o efeito de pílula */
     font-size: 0.9rem; 
-    background: rgba(59,130,246,0.15); /* fundo azul claro com opacidade */
-    color: aliceblue;
+    background: rgba(255, 255, 255, 0.719); /* fundo azul claro com opacidade */
+    color: rgb(0, 0, 0);
+    font-weight: 600;
     border: 1px solid #22314a;  /*borda azul sólida para dar definição*/
 
 }
