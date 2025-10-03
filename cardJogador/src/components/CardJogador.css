@@ -1,0 +1,53 @@
+/* ------- CARD PRINCIPAL ------- */
+.card-jogador{
+    background:#074de4;
+    color: #e5e7eb;
+    border: 1px solid #1f2937; /* 1px borda fina de forma sólida em um tom escuro*/
+    border-radius: 16px;  /* arredondar os cantos do card com um raio 16px*/
+    padding: 24px;
+    width: 320px;     /*Largura do card */
+    transition: transform .15s ease, box-shadow .15s ease ; /* transição suave para os efeitos de transformação e sombra ao passar o mouse */
+}
+.card-jogador:hover{
+    transform: translateY(-4px); /* Ao passar o mouse, move o carde 4px para cima*/
+    box-shadow: 0 10px 24px rgba(0,0,0,0.35); /* Aplica uma sombra para criar um efeito de elevação*/
+}
+/*--------------- CABEÇALHO DO CARD ----------------------------*/
+.cj-cabecalho{
+    display: flex; 
+    align-items: center;
+    gap: 16px; /* espaço entre os elementos filhos */
+    margin-bottom: 14px;
+}
+/*---------------- IMAGEM DO JOGADOR -----------*/
+.cj-imagem{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover; /* garante que a imagem cubra totalmente o espaço sem distorcer */
+    border: 3px solid #243045;
+}
+/* ------ TEXTO PRINCIPAL ---------------------------- */
+.cj-info .cj-nome {
+    margin: 0;
+    font-size: 1.3rem;
+}
+/*---------- ETIQUETA DA POSIÇÃO ----------------------*/
+.cj-etiqueta {
+    display: inline-block; /* faz o elemento se comportar como um bloco em linha*/
+    margin-top: 6px;
+    padding: 4px 12px;  /* espaçamento interno: 4px vertical e 12px horizontal*/
+    border-radius: 999px;  /* Deixa as bordas totalmente arredondadas, causando o efeito de pílula */
+    font-size: 0.9rem; 
+    background: rgba(59,130,246,0.15); /* fundo azul claro com opacidade */
+    color: aliceblue;
+    border: 1px solid #22314a;  /*borda azul sólida para dar definição*/
+
+}
+/* ---------- INFORMAÇÕES DO RODAPÉ ------------------------------- */
+.cj-meta{
+    display: flex;
+    justify-content: space-between; /*Distribui os itens com espaço igual entre eles */
+    font-size: 1rem; 
+    margin-top: 14px;
+}
